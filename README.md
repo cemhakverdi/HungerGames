@@ -11,7 +11,7 @@ A desktop app that created with python and sqlite3
 
 
 - The purpose of this project is to create a complex database system.
-- The GUI part is fully entegrated with the database and working with it.
+- The GUI part is fully integrated with the database and working with it.
 - You can download and inspect the database.
 - Python GUI part is not the main aspect of the project, so, It's not very user friendly. Excuse me about it!
 
