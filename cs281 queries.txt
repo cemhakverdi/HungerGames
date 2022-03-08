@@ -1,0 +1,39 @@
+//LOGIN GAMEMAKER
+
+Select Description, Setting_Type, Year_id from Game inner join GameMaker on Game.SSN = GameMaker.SSN where GameMaker.SSN = 1288933015
+Select Rule_id, Content from AdditionalRule inner join Game on Game.Year_id = AdditionalRule.Year_id where Game.Year_id = 2019
+Insert into AdditionalRule Values(192,2019,'Knife')
+Select Mentor.SSN, User.Name from Mentor inner join User on Mentor.SSN = User.SSN
+Insert into Awards values (Award_name,SSN)
+Insert into Interaction values(Interactee_id,Interacted_id,Interaction_id,Interaction_date,Description)
+Select SSN from User where SSN in(Select SSN from GameMaker where SSn = 4558732018)
+Select count(Rule_id) from AdditionalRule where Rule_id = 
+Select count(Award_name) from Awards where Award_name = 
+Select count(Interaction_id) from Interaction where Interaction_id = 1
+Select count(Tribute_id) from Tribute where Tribute.Tribute_id = 121
+
+//LOGIN MENTOR
+Select Tribute.Tribute_id, Tribute.Name, Tribute.Surname from Tribute INNER JOIN Mentor on Tribute.SSN = Mentor.SSN where Mentor.SSN = 1793652185 
+Select Tribute.Status, Interaction.Description, Interaction_date from Interaction INNER JOIN Tribute on Tribute.Tribute_id = Interaction.Interactee_id or Tribute.Tribute_id = Interaction.Interacted_id where Tribute_id = 121 order by Interaction_date 
+
+//LOGIN SPONSOR
+SELECT Tribute.Tribute_id, Tribute.Name, Tribute.Surname from Tribute INNER JOIN Game on Tribute.Year_id = Game.Year_id where Tribute.Year_id = 2021
+SELECT Tribute.Tribute_id, Tribute.Name, Tribute.Surname from Tribute where Tribute.name = 'Peeta'
+SELECT Tribute.Tribute_id, Tribute.Name, Tribute.Surname from Tribute where Tribute.Status = 'Alive'
+SELECT Tribute.Tribute_id, Tribute.Name, Tribute.Surname from Tribute where Tribute.District_no = 10
+
+SELECT Gift_name FROM GivesGift INNER JOIN Sponsor on Sponsor.SSN = GivesGift.SSN where Sponsor.SSN = 1964521587
+
+
+//List available gifts
+select * from gift
+
+//choose one tribute and send the chosen gift to that tribute
+
+insert into GivesGift(SSN, Gift_name, Tribute_id) values(9978541236, 'Spile', 101)
+
+//Display credit card
+SELECT Sponsor.Credit_Card FROM Sponsor WHERE Sponsor.SSN = ?
+
+//update credit card
+update Sponsor set Credit_Card = 1346799515302600 where sponsor.SSN = 9684225569
